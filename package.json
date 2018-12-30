@@ -1,0 +1,29 @@
+{
+  "name": "Mobuss-Constru-o---Quiz-02",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "sweetalert2": "^7.28.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.0",
+    "gulp": "^3.9.1",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-sass": "^4.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clintdigital/Mobuss-Constru-o---Quiz-02.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clintdigital/Mobuss-Constru-o---Quiz-02/issues"
+  },
+  "homepage": "https://github.com/clintdigital/Mobuss-Constru-o---Quiz-02#readme"
+}

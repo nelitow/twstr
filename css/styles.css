@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,600");
+* {
+  transition: all 0.5s ease; }
+
+.Verde {
+  background-color: #389916; }
+
+.Vermelho {
+  background-color: #d9152b; }
+
+.Amarelo {
+  background-color: #f7e809; }
+
+.Azul {
+  background-color: #1553aa; }
