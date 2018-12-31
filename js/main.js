@@ -11,19 +11,19 @@ jQuery(document).ready(function($) {
 	function getBodyPart() {
 	  switch (getRndInteger(1, 4)) {
 	    case 1:
-	      bp = "Pé esquerdo";
-	      emoji = "🦶";
+	      bp = "Pé esquerdo ⬅️";
+	      emoji = "👟";
 	      break;
 	    case 2:
-	      bp = "Mão esquerda";
+	      bp = "Mão esquerda ⬅️";
 	      emoji = "🤚";
 	      break;
 	    case 3:
-	      bp = "Pé direito";
-	      emoji = "🦶";
+	      bp = "Pé direito ➡️";
+	      emoji = "👟";
 	      break;
 	    case 4:
-	      bp = "Mão direita";
+	      bp = "Mão direita ➡️";
 	      emoji = "🤚";
 	      break;
 	  }

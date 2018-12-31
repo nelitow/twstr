@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121306349-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-121306349-2');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Twister game online spinner</title>
@@ -12,16 +21,22 @@
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
   </head>
-  <body class="bg-dark">
+  <body class="bg-light">
     <div class="container">
       <div class="row py-5">
         <div class="col-md-4 col-sm-12 mx-auto text-center">
-          <div id="result" class="p-5 my-5 rounded shadow text-light font-weight-bold">
+          <div id="result" class="p-5 my-5 rounded shadow font-weight-bold">
             Sorteie!
           </div>
           <button id="sortear" class="btn btn-primary">
     				Sortear!
           </button>
+        </div>
+      </div>
+      <div class="row py-5">
+        <div class="col-12 mx-auto text-center">
+          <div class="bg-white rounded shadow" data-mvc-banner="medium-rectangle"></div>
+          <script type="text/javascript"> (function(storeName) { var b = document.createElement('script'); b.type = 'text/javascript'; b.async = true; b.src = 'https://www.magazinevoce.com.br/js/banner.js?store='+ storeName; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(b, s); })('techcity'); </script>
         </div>
       </div>
     </div>
