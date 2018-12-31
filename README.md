@@ -1,1 +1,2 @@
-# Mobuss-Constru-o---Quiz-02
+Random generator website for those that lost their Twister game spinner 
+https://twisterspin.online/
