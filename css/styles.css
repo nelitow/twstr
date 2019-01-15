@@ -2,14 +2,14 @@
 * {
   transition: all 0.5s ease; }
 
-.Verde {
+.Verde, .Green {
   background-color: #389916; }
 
-.Vermelho {
+.Vermelho, .Red {
   background-color: #d9152b; }
 
-.Amarelo {
+.Amarelo, .Yellow {
   background-color: #f7e809; }
 
-.Azul {
+.Azul, .Blue {
   background-color: #1553aa; }
