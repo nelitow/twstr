@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 	$("#sortear").click(function() {
 	  $("#result").removeClass(color);
 	  color = getColor();
-	  $("#result").text(getBodyPart() + " no " + color);
+	  $("#result").text(getBodyPart() + " on " + color);
 	  $("#result").addClass(color);
 
 	});
