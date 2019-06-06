@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "gulp-cli": "^2.2.0",
     "sweetalert2": "^7.28.4"
   },
   "devDependencies": {
