@@ -1,47 +1,47 @@
-var gulp        = require('gulp');
-var sass = require('gulp-sass');
-var browserSync = require('browser-sync').create();
-var reload      = browserSync.reload;
-var php  = require('gulp-connect-php');
-var browserSync2 = require('browser-sync');
+const browsersync = require("browser-sync");
+const gulp = require("gulp");
+const phpConnect = require('gulp-connect-php');
+const plumber = require("gulp-plumber");
+const sass = require("gulp-sass");
+const rename = require("gulp-rename");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
 
-gulp.task('browser-sync',['php'], function() {
-    browserSync.init(["css/*.css", "js/*.js"], {
-        proxy: '127.0.0.1:8010',
-        port: 8080,
-        open: true,
-        notify: false,
+function connectsync() {
+    phpConnect.server({
+        port: 8000,
+        keepalive: true,
+        base: "."
+    }, function (){
+        browsersync({
+            proxy: '127.0.0.1:8000'
+        });
     });
-    gulp.watch("*.html").on("change", reload);
-});
+}
 
-gulp.task('sass', function () {
-    gulp.src('scss/styles.scss')
-        .pipe(sass({includePaths: ['scss']}))
-        .pipe(gulp.dest('css'));
-    gulp.src('scss/aw-modal.scss')
-        .pipe(sass({includePaths: ['scss']}))
-        .pipe(gulp.dest('css'));
-});
+function browserSyncReload(done) {
+    browsersync.reload();
+    done();
+}
 
-gulp.task('default', ['sass', 'browser-sync'], function () {
-    gulp.watch("scss/*.scss", ['sass']);
-    gulp.watch("/*.html");
-    gulp.watch("js/*.js");
-});
+function watchFiles() {
+    gulp.watch("./**/*.php", browserSyncReload);
+    gulp.watch("./scss/**", css);
+}
 
-gulp.task('php', function() {
-    php.server({ base: './', port: 8010, keepalive: true});
-});
+function css() {
+    return gulp
+    .src("./scss/**/*.scss")
+    .pipe(plumber())
+    .pipe(sass({ outputStyle: "expanded" }))
+    .pipe(gulp.dest("./css/"))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(gulp.dest("./css/"))
+    .pipe(browsersync.stream());
+ }
 
-gulp.task('connect-sync', function() {
-  php.server({}, function (){
-    browserSync2({
-      proxy: '127.0.0.1:8000'
-    });
-  });
+const watch = gulp.parallel([watchFiles, connectsync]);
 
-  gulp.watch("scss/*.scss", ['sass']).on('change', function () {
-    browserSync.reload();
-  });
-});
+exports.default = watch;
