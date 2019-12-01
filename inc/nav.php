@@ -5,12 +5,12 @@
   <div class="collapse navbar-collapse" id="">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a href="/" class="text-light">
+        <a href="https://nltw.xyz/twister-spinner/" class="text-light">
           <h3>Twister Spin</h3>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link float-right" href="/english.php" >In English <img src="images/english.png" width="25px" alt=""></a>
+        <a class="nav-link float-right" href="https://nltw.xyz/twister-spinner/english.php" >In English <img src="https://nltw.xyz/twister-spinner/images/english.png" width="25px" alt=""></a>
       </li>
       <li class="nav-item">
         <a class="nav-link float-right" target="_blank" href="https://magazinevoce.com.br/magazinetechcity/">Nossa loja</a>
